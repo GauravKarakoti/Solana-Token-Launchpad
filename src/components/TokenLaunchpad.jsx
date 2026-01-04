@@ -1,4 +1,4 @@
-export function TokenLaunchad() {
+export function TokenLaunchpad() {
     return <div style={{
         height: '100vh',
         display: 'flex',
