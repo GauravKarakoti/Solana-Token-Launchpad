@@ -2,7 +2,7 @@ import { createInitializeMint2Instruction, getMinimumBalanceForRentExemptMint } 
 import { useWallet } from "@solana/wallet-adapter-react";
 import { Keypair, SystemProgram, Transaction } from "@solana/web3.js";
 
-export function TokenLaunchpad() {
+export default function TokenLaunchpad() {
     const wallet = useWallet();
     async function createToken() {
         const lamports = await getMinimumBalanceForRentExemptMint(connection);
@@ -26,13 +26,13 @@ export function TokenLaunchpad() {
         await wallet.signTransaction(transaction);
     }
     return <div style={{
-        height: '100vh',
+        height: '80vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-    }}>
-        <h1>Solana Token Launchpad</h1>
+    }} className="launchpad">
+        <h1 className="title">Solana Token Launchpad</h1>
         <input className='inputText' type="text" placeholder="Name"></input> <br />
         <input className='inputText' type="text" placeholder="Symbol"></input> <br />
         <input className='inputText' type="text" placeholder="Image URL"></input> <br />

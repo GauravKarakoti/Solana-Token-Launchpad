@@ -17,6 +17,7 @@ function App() {
             display: 'flex',
             justifyContent: 'space-between',
             padding: 20,
+            alignItems: 'center',
           }}>
             <WalletMultiButton />
             <WalletDisconnectButton />
